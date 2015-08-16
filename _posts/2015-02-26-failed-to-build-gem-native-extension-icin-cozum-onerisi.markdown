@@ -13,18 +13,18 @@ Haliyle sisteminize yeniden Ruby, ardından Ruby on Rails kurmak isteyebilirsini
 
 Herhangi bir paket yöneticisi kullanmadan Ruby kurmak için;
 
-```
+{% highlight bash %}
 sudo apt-get install ruby-full
-```
+{% endhighlight %}
 
 komutunu yürütmek işinizi görecektir.
 
 Rails kurarken ise öncelikle bir Javascript Runtime'ına ihtiyacanız olacaktır. Node.js kurmak bu iş için en kısa çözüm yoludur. Şimdi gelelim yazının başında bahsedilen hatayı almanızı sağlayacak duruma.
 
 Öncelikle
-```
+{% highlight bash %}
 gem install rails
-```
+{% endhighlight %}
 
 komutunu yürütmeyi denediniz. Sisteminiz `root` haklarına sahip değilseniz kurulumu tamamlayamayacaktır. Hemen bir `root` kullanıcısına geçip aynı komutu tekrar yürüttünüz ve bir süre bekledikten sonra aşağıdakine benzer bir ekran ile karşılaştınız:
 
@@ -32,9 +32,9 @@ komutunu yürütmeyi denediniz. Sisteminiz `root` haklarına sahip değilseniz k
 
 Tam olarak bu noktada aşağıdaki komutu koşmanızla bu hatayı çözmeniz mümkündür.
 
-```
+{% highlight bash %}
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties
-```
+{% endhighlight %}
 
 Bu komutu yürütmeniz ile birlikte yapacağınız yüklemeler Rails'in sağlıklı yüklenmesi için gerekli bağımlılıkları yüklemek işini de görecektir.
 

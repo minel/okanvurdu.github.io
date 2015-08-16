@@ -12,32 +12,32 @@ Başlamadan önce belirtmekte fayda var; kurulum yaptığım Ubuntu sürümü ç
 - İlk olarak bir Terminal (ya da kendi kabuk programınız) penceresi açalım.
 - Debian tabanlı sistemlerde öntanımlı paket yöneticisi APT (Aptitude)'dir. Kuruluma başlamadan önce paket yöneticimizin kaynaklarını (repositories) güncellemesi için aşağıdaki komutu yürütelim:
 
-```
+{% highlight bash %}
 sudo apt-get update
-```
+{% endhighlight %}
 
 - Şimdi ise kurulumu yapmak için aşağıdaki komutu yürütelim:
 
-```
+{% highlight bash %}
 sudo apt-get install postgresql postgresql-contrib
-```
+{% endhighlight %}
 
 Kuruluma başlamadan önce sizden onay vermeniz istenebilir. Uygun biçimde onaylayarak devam ediniz.
 
 - Bu adımların sonunda PostgreSQL'i sisteminize başarıyla kurmuş olduğunuz. Şimdi gelin PostgreSQL'in çalışır durumda olup olmadığını kontrol edelim:
 
-```
+{% highlight bash %}
 service postgresql status
 > 9.3/main (port 5432): online
-```
+{% endhighlight %}
 
 İlk satırdaki komutu yürütmenizin ardından ikinci satırdaki gibi bir yanıt alıyorsanız her şey yolunda gitmiş demektir. Kurulum sonrası PostgreSQL servisi otomatik olarak çalışır hale gelmektedir.
 
 Peki PostgreSQL online yani aktif olmamışsa ne yapılmalı?
 
-```
+{% highlight bash %}
 sudo service postgresql start
-```
+{% endhighlight %}
 
 Üstteki komutu yürüttükten sonra bir önceki komutu (`service postgresql status`) yürüterek durumunu kontrol ediniz. Eğer hala çalışır hale gelmemişse bu gönderi altına aldığınız hatayı belirtmeniz durumunda çeşitli çözüm önerilerini tartışabiliriz.
 

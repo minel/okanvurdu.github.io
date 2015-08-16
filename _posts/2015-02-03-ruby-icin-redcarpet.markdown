@@ -30,20 +30,20 @@ Bunun yanısıra kişisel projelerinizde de kullanmanız mümkün. Örnek olarak
 Rails tarafında kurulum oldukça basit. (Tıpkı diğer tüm Ruby kütüphaneleri için olduğu gibi)
 
 Halihazırda bir Rails projeniz varsa kurulum, Gemfile'ınıza
-```
+{% highlight ruby %}
 gem 'redcarpet'
-```
+{% endhighlight %}
 eklemesini yaptıktan sonra komut istemcinizde proje dizininize ulaşarak
 
-```
+{% highlight ruby %}
 bundle install
-```
+{% endhighlight %}
 komutunu yürütmenizle tamamlanacaktır.
 
 Bunun yerine komut istemcinizi açarak
-```
+{% highlight ruby %}
 gem install redcarpet
-```
+{% endhighlight %}
 komutunu yürütmek de eşdeğer bir durumdur.
 
 > **Unutmadan:**
@@ -58,10 +58,10 @@ Kurulum biter bitmez içinizde büyüyen merakı hızlıca gidermek için aşağ
 * Redcarpet kütüphanesini kullanabilemek için öncelikle bunu kabuğa bildirmeliyiz. `require  'redcarpet'` komutunu yürüterek bu işlemi tamamlayınız.
 * Redcarpet'ın bir Instance'ını oluşturmak için her şey hazır. Şimdi ise;
 
-```
+{% highlight ruby %}
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, {})
 markdown.render('*Bu bir örnektir*')
-```
+{% endhighlight %}
 komutlarını yürüttükten sonra aşağıdaki gibi bir çıktı ile karşılaşacaksınız:
 
 ![](/img/posts/Screenshot-from-2015-02-03-20-36-16.png)

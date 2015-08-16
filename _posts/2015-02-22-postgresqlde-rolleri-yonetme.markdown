@@ -33,15 +33,15 @@ Gördüğünüz gibi karşımıza tanımlı roller ve yapabilecekleri işleri (y
 
 Şimdi `test` adını verdiğimiz ve `test*2015!` parolasına sahip bir rolü nasıl oluşturabiliriz birlikte inceleyelim.
 
-```
+{% highlight sql %}
 CREATE ROLE test LOGIN PASSWORD 'test*2015!' CREATEDB;
-```
+{% endhighlight %}
 
 Yukarıda yazmış olduğum komut tam olarak bu işi yapmak için uygundur. Burada dikkat etmeniz gereken nokta satır sonuna noktalı virgül (;) koymanız gerektiğidir. Aksi halde PostgreSQL yazdığınız komutun bitmediğini, yazmaya devam edeceğinizi düşüneceği için komutun çıktısını göremeyeceksiniz.
 
 Şimdi bir de komutu yürütüp çıktısını inceleyelim:
 
-![Komutun çıktısı](/img/posts/2015/02/after-running-command.png)
+![Komutun çıktısı](/img/posts/after-running-command.png)
 
 Komutu yürüttükten hemen ardından varolan rolleri görmemizi sağlayan `\du` komutunu bir kez daha yürüttüm.
 
@@ -53,9 +53,9 @@ Bunun için anahtar kelime `ALTER`. Tahminimce `ALTERATION (Değişiklik)` kelim
 
 Aslında SQL sözdiziminde (syntax) `ALTER` değiştirilmek istenen her ögenin başında yer alır. Özetle `ALTER` rolleri yeniden yapılandırmaktan daha geniş bir kapsama sahiptir. (tabloları, alanları yeniden yapılandırmak vb.)
 
-```
+{% highlight sql %}
 ALTER ROLE test NOLOGIN;
-```
+{% endhighlight %}
 
 Bir üst satırda `test` isimli kullanıcımızın LOGIN yetkisini elinden almak için gerekli komutu hazır hale getirdik. Şimdi yine bu komutu yürüterek çıktısını gözlemleyelim:
 
@@ -67,9 +67,9 @@ Kısacası bir yetki, yukarıda gördüğünüz şekilde değiştirilebiliyor. Y
 
 Son olarak oluşturduğumuz rolü ortadan kaldırmayı da inceliyoruz.
 
-```
+{% highlight sql %}
 DROP ROLE test;
-```
+{% endhighlight %}
 
 Haydi, hemen yürütelim şunu!
 

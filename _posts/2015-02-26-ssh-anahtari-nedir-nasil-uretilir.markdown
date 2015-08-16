@@ -29,17 +29,17 @@ Güzel soru.
 
 İşe öncelikle SSH anahtarı oluşturmakla başlayalım. UNIX tabanlı bir işletim sisteminde (Ben Ubuntu üzerinde yapacağım) komut istemcinizi açınız. (Ubuntu için Terminal)
 
-```
+{% highlight bash %}
 ssh-keygen -t rsa -C "eposta@adresiniz.com"
-```
+{% endhighlight %}
 
 komutunu yürütünüz.
 
 İlk olarak:
 
-```
+{% highlight bash %}
 > Enter file in which to save the key (/home/okan/.ssh/id_rsa):
-```
+{% endhighlight %}
 
 şeklinde bir çıktı alacaksınız.
 
@@ -49,31 +49,31 @@ Burada istemcinizin sizden beklediği "anahtarı hangi dosya ismi ile kaydedeyim
 
 Bu kısımda dosya adı vererek ya da varsayılan dosya adını kabul ederek devam ettikten sonra ise
 
-```
+{% highlight bash %}
 > Enter passphrase (empty for no passphrase):
-```
+{% endhighlight %}
 
 çıktısı ile karşılaşacaksınız. Burada beklenen ise bu anahtarı özel bir şifre ile koruyup korumayacağınızdır. Bu anahtarı kullanarak verilerinize erişmeye çalıştığınızda ekstra bir güvenlik önlemi olarak belirttiğiniz parolanın sorulmasını sağlayabilirsiniz. Bu kısmı da boş geçme (Enter ile) şansınız mevcut. Bir parola verseniz de vermeseniz de sizden bunu doğrulamanız bir sonraki adımda beklenecektir. Bu adımı da geçmenizin ardından şöyle bir mesaj ile karşılaşırsınız:
 
-```
+{% highlight bash %}
 The key fingerprint is:
 **:**:**:**:**:**:**:**:**:**:**:**:**:**:**:** eposta@adresiniz.com
-```
+{% endhighlight %}
 
 Artık SSH anahtarınız hazır hale geldi. Şimdi bunu Github tarafından kimlik doğrulama için kullanılabilir hale getirelim.
 
 * Komut istemcinizi açınız.
 * SSH anahtarlarınızın depolandığı dizine gidiniz:
 
-```
+{% highlight bash %}
 cd ~/.ssh
-```
+{% endhighlight %}
 
 * Aşağıdaki komutu vererek SSH anatarınızın içeriğinin ekrana bastırılmasını sağlayınız:
 
-```
+{% highlight bash %}
 cat anahtar_dosyaniz.pub (mesela: cat id_rsa.pub)
-```
+{% endhighlight %}
 
 * Ekrana bastırılan metni kopyalayınız ve daha önceden oturum açmış olduğunuz https://github.com/settings/ssh adresine gidiniz.
 

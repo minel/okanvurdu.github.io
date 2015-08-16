@@ -11,3 +11,11 @@ github_username:  okanvurdu
 markdown: kramdown
 excerpt_separator: <!--more-->
 permalink: "/:title"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      is_post: true

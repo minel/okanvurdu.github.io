@@ -5,21 +5,23 @@
   <div class="uimg" style="background-image: url(/img/ov.jpg)"></div>
   <div class="dn-side-menu">
       <div class="dn-center">
-        <ul class="side-nav" style="display: none">
+        <ul class="side-nav">
           <li><a href="/" class="dn-ajx-link">Anasayfa</a></li>
-          <li><a href="/about-me" class="dn-ajx-link">Hakkımda</a></li>
+          <li><a href="/hakkimda" class="dn-ajx-link">Hakkımda</a></li>
         </ul>
-        <div class="dn-menu-sec">
-          <div class="dn-show-menu">
-            <a class="dn-show-menu-action open"><span class="dn-icon-arrow-down"></span></a>
-          </div>
-        </div>
         <hr class="dn-msep">
         <div class="dn-menu-sec">
           <a class="night-day-action"><span class="dn-clock"></span></a>
           <span class="dn-time">1:53 ÖÖ</span>
         </div>
         <hr class="dn-msep">
+        {% if page.is_post %}
+        <div class="pagination" role="navigation">
+                            <span class="newer-posts">&nbsp;</span>
+                            <span class="post-list-pagination-item post-list-pagination-item-current"><a style="display: inline-block" href="/"><span class="dn-icon-back dn-back-to-posts"></span></a></span>
+                            <a href="/" class="older-posts dn-back-to-posts hide-for-small">GERİ</a>
+                        </div>
+        {% endif %}
       </div>
     </div>
 </div>

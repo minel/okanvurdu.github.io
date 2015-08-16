@@ -16,9 +16,9 @@ Sadece bu iş için sunucu kiralamak, satın almak ya da varolan sunucunuza bunu
 `http-server` kod adlı npm paketi bu işi kolay bir biçimde halletmek için ideal. Elbette çok daha farklı yolları seçerek daha optimize çözümler üretilebilir fakat, kısa sürede hızlıca çözüme ulaşmak için henüz daha iyi bir çözüm göremedim.
 
 ######Kurulum:
-```
+{% highlight bash %}
 npm install http-server -g
-```
+{% endhighlight %}
 
 Evet, hepsi bu kadar. Artık komut istemcinizi açıp herhangi bir dizine gittikten sonra `http-server` komutunu verirseniz http://localhost:8080 üzerinde aktif klasörünüz serve edilecektir.
 
