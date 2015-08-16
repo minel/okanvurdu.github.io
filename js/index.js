@@ -23,7 +23,7 @@ function compare(a,b) {
   if (a.date > b.date) { return 1; }
   return 0;
 }
- 
+
 function clockTick() {
     var currentTime = new Date ();
     var currentHours = currentTime.getHours();
@@ -48,13 +48,13 @@ function addToMap(id) {
     var idx = $(id).attr('data-index');
     dateMap.unshift({id:id,idx:idx});
 }
- 
+
 function addToEven(id) {
     $(id).appendTo(".dn-even-parent");
     $(id).removeClass('hidden');
 }
- 
- 
+
+
 function addToOdd(id) {
     $(id).appendTo(".dn-odd-parent");
     $(id).removeClass('hidden');
@@ -63,7 +63,7 @@ function addToOdd(id) {
 function displayPosts() {
     dateMap = [];
     // the formating of date is incorrect from the core is what it seems, so need to use defined
-    // index to correctly sort the posts for single column screens. 
+    // index to correctly sort the posts for single column screens.
     var idx = 0;
     $('.dn-post-entry').each(function() {
         $(this).attr('data-index', idx);
@@ -81,7 +81,7 @@ function displayPosts() {
 
 function adjustElements() {
     displayPosts();
-    
+
     var blogName = $('.dn-blog-name > h5').text();
     if (blogName.length > 40) {
         $('.dn-blog-name > h5').text(blogName.substring(0, 40) + '...');
@@ -102,7 +102,7 @@ function adjustForSmall() {
     if ($('.dn-single-column').children('article').length === 0) {
         for(var i = 0; i < dateMap.length; i++) {
             $(dateMap[i].id).prependTo('.dn-single-column');
-        }       
+        }
     }
 }
 
@@ -114,7 +114,7 @@ function adjustForMediumAndLarge() {
                 appendEl = '.dn-odd-parent';
             }
             $(dateMap[i].id).prependTo(appendEl);
-        } 
+        }
     }
 }
 
@@ -138,7 +138,7 @@ function adjustElementsToWidth() {
         }
     });
 }
- 
+
 function switchTime() {
     $('body').toggleClass('night');
     $('body').addClass('dn-noswitch');
@@ -150,32 +150,6 @@ function scrollToTop(p) {
 }
 
 function initActions() {
-    $('.dn-back-to-posts').click(function(event) {
-        lnkPushState($(this).attr("href"));
-        displayPageInContentSmooth('/page/' + currentPage);
-        return false;
-    });
-    $('.dn-load-post-page, .dn-post-link').click(function(event) {
-        lnkPushState($(this).attr("href"));
-        if ($(this).attr('href').indexOf('/page/') !== -1) {
-            var page = $(this).attr('href').match(/\d+/gi);
-            if (page) {
-                currentPage = parseInt(page[0]);
-            } else {
-                 currentPage = 1;
-            }
-        } else if ($(this).hasClass('dn-load-post-page')) {
-            currentPage = 1;
-        }
-        displayPageInContentSmooth($(this).attr('href'));
-        return false;
-    });
-    $('.dn-ajx-link').unbind('click').click(function(event) {
-        currentPage = 1;
-        lnkPushState($(this).attr("href"));
-        displayPageInContentSmooth($(this).attr('href'));
-        return false;
-    });
     $('.uimg, uimg-d').unbind('click').click(function() {
         window.location.href = '/';
     });
@@ -194,7 +168,7 @@ function prepareForLoad() {
 }
 
 function loadPageElements(data) {
-    $("#dn-content").empty(); 
+    $("#dn-content").empty();
     $("#dn-content").hide();
     var $response = $(data);
     var content = $response.find('#dn-content').html();
@@ -204,19 +178,6 @@ function loadPageElements(data) {
     initActions();
     displayPosts();
     adjustElementsForBlog();
-    $("#dn-content").fadeIn(function() {
-        $('.site-footer').fadeIn();
-    });
-}
-
-function displayPageInContentSmooth(url, callback) {
-    $('.site-footer').hide();
-    scrollToTop();
-    $("#dn-content").fadeOut(400, function() {
-       $("#dn-content").empty(); 
-       prepareForLoad();
-       loadPageToContent(url, callback);
-    }); 
 }
 
 function checkTimeSwitch() {
@@ -258,11 +219,11 @@ function loadPageToContent(url, callback) {
                 loadPageElements(data);
             }, 400);
         },
-        error: function(){      
-            
+        error: function(){
+
         },
-        complete: function(){ 
-            
+        complete: function(){
+
         },
         statusCode: {
             404: function(xhr) {
@@ -271,7 +232,7 @@ function loadPageToContent(url, callback) {
         }
     });
 }
- 
+
 jQuery.fn.rotate = function(degrees) {
     $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
         '-moz-transform' : 'rotate('+ degrees +'deg)',
@@ -285,27 +246,22 @@ function lnkPushState(url) {
     history.pushState({path: pushurl}, '', pushurl);
 }
 
-$(window).bind('popstate', function(event) {
-    var state = event.originalEvent.state;
-    if (state && state.path) {
-        displayPageInContentSmooth(state.path);
-    }
-});
+
 
 /*globals jQuery, document */
 (function ($) {
     "use strict";
 
     $(document).ready(function(){
-        
+
         setInterval('clockTick()', 1000);
         initActions();
-        
+
         $('.night-day-action').click(function(event) {
             event.preventDefault();
             switchTime();
         });
-        
+
         $('.dn-show-menu-action').click(function(event) {
             //event.preventDefault();
             if ($(this).hasClass('open')) {
@@ -321,12 +277,12 @@ $(window).bind('popstate', function(event) {
             }
         });
 
-    
+
 
         $(".post-content").fitVids();
         adjustElements();
         displayHome();
-        
+
         $(window).load(function() {
             adjustElementsToWidth();
         }).resize(function(){
