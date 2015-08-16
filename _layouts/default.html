@@ -3,7 +3,17 @@
   {% include head.html %}
   <body class="home-template">
     {% include header.html %}
-    {{ content }}
+    <div class="row main-row dn-initial hidden">
+        <div class="large-11 medium-10 small-12 columns body-column adjust dn-cnt large-centered medium-centered" id="dn-content">
+            {{ content }}
+        </div>
+    </div>
+    <div class="large-12 medium-12 small-12 columns dn-load-img night-load hidden no-sp">
+        <img src="{{asset "css/icons/load/night.gif"}}" class="" />
+    </div>
+     <div class="large-12 medium-12 small-12 columns dn-load-img day-load hidden no-sp">
+        <img src="{{asset "css/icons/load/day.gif"}}" class="" />
+    </div>
     {% include footer.html %}
   </body>
 </html>

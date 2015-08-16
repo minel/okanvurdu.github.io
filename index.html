@@ -2,28 +2,20 @@
 layout: default
 ---
 
-<div class="row main-row dn-initial">
-  {% for post in site.posts %}
-  <div class="large-11 medium-10 small-12 columns body-column adjust dn-cnt large-centered medium-centered" id="dn-content">
-    <div class="large-12 medium-12 hide-for-small columns adjust dn-odd-parent">
-      <article class="large-12 medium-12 small-12 columns post dn-odd dn-post-entry adjust dn-no-sps">
-        <header class="post-header">
-          <div class="large-12 medium-12 small-12 columns no-sp dn-date">
-            <div class="dn-head-meta dn-date-share">
-              <time datetime="2015-04-16">{{ post.date | date: "%b %-d, %Y" }}</time>
-            </div>
-          </div>
-        </header>
-        <section class="large-12 medium-12 small-12 columns no-sp dn-post-excerpt">
-          <h2 class="post-title">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="dn-post-link">{{ post.title }}</a>
-          </h2>
-          <p>
-            {{ post.excerpt }}
-          </p>
-        </section>
-      </article>
-    </div>
-  </div>
-  {% endfor %}
-</div>
+<div class="large-6 medium-6 hide-for-small columns adjust dn-odd-parent"></div>
+<div class="large-6 medium-6 hide-for-small columns adjust dn-even-parent"></div>
+<div class="small-12 columns adjust dn-single-column"></div>
+
+{% for post in site.posts %}
+  <article class="large-12 medium-12 small-12 columns post dn-post-entry adjust dn-no-sps">
+    <header class="post-header">
+      <div class="large-12 medium-12 small-12 columns no-sp dn-date">
+        <div class="dn-head-meta dn-date-share"><time datetime="{{ post.date | date: "%b %-d, %Y" }}">{{ post.date | date: "%b %-d, %Y" }}</time></div>
+      </div>
+    </header>
+    <section class="large-12 medium-12 small-12 columns no-sp dn-post-excerpt">
+      <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}" class="dn-post-link">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
+    </section>
+  </article>
+{% endfor %}
