@@ -2,22 +2,28 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="row main-row dn-initial">
+  {% for post in site.posts %}
+  <div class="large-11 medium-10 small-12 columns body-column adjust dn-cnt large-centered medium-centered" id="dn-content">
+    <div class="large-12 medium-12 hide-for-small columns adjust dn-odd-parent">
+      <article class="large-12 medium-12 small-12 columns post dn-odd dn-post-entry adjust dn-no-sps">
+        <header class="post-header">
+          <div class="large-12 medium-12 small-12 columns no-sp dn-date">
+            <div class="dn-head-meta dn-date-share">
+              <time datetime="2015-04-16">{{ post.date | date: "%b %-d, %Y" }}</time>
+            </div>
+          </div>
+        </header>
+        <section class="large-12 medium-12 small-12 columns no-sp dn-post-excerpt">
+          <h2 class="post-title">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="dn-post-link">{{ post.title }}</a>
+          </h2>
+          <p>
+            {{ post.excerpt }}
+          </p>
+        </section>
+      </article>
+    </div>
+  </div>
+  {% endfor %}
 </div>

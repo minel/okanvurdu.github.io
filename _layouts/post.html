@@ -1,15 +1,58 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="row main-row dn-initial" style="">
+  <div class="large-11 medium-10 small-12 columns body-column adjust dn-cnt large-centered medium-centered sm-aj" id="dn-content">
+    <div class="large-12 medium-12 small-12 columns adjust dn-post-c sm-aj">
+      <article class="large-12 medium-12 small-12 columns post adjust dn-no-sps sm-aj">
+        <header class="post-header">
+          <div class="large-6 medium-6 small-6 columns no-sp">
+            <div class="dn-sep">“</div>
+          </div>
+          <div class="large-6 medium-6 small-6 columns no-sp">
+            <div class="dn-author">Okan Vurdu tarafından</div>
+          </div>
+          <div class="large-12 medium-12 small-12 columns no-sp dn-date ">
+            <div class="dn-head-meta dn-date-share"><time datetime="2015-04-16">16 / Nis / 2015</time></div>
+          </div>
+        </header>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+        <section class="large-12 medium-12 small-12 columns no-sp">
+          <h2 class="post-title">{{ page.title }}</h2>
+          <section class="post-content">
+            {{ content }}
+          </section>
+          <span class="post-meta"></span>
+        </section>
+        <section class="large-12 medium-12 small-12 columns no-sp disqus-comments" style="margin-top: 3rem">
+          <div id="disqus_thread"><iframe id="dsq-1" data-disqus-uid="1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="http://disqus.com/embed/comments/?base=default&amp;version=104feca2c767b6d7ee0b10d93beeec41&amp;f=okanvurdu&amp;t_i=12&amp;t_u=http%3A%2F%2Fblog.okanvurdu.com%2Felementary-os-icin-lid-close-action-ayari%2F%23!%2F12&amp;t_d=Elementary%20OS%20i%C3%A7in%20%22lid-close-action%22%20ayar%C4%B1&amp;t_t=Elementary%20OS%20i%C3%A7in%20%22lid-close-action%22%20ayar%C4%B1&amp;s_o=default#1" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 387px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+          <script type="text/javascript">
+            var disqusShortName = "okanvurdu";
+            if (disqusShortName) {
+                var loadDisqus = true;
+                if (typeof DISQUS != 'undefined') {
+                    DISQUS.reset({reload: true, config: function () {
+                            this.page.url = location.protocol + '//' + window.location.host + '{{url}}#!/{{id}}';
+                        }
+                    });
+                    loadDisqus = false;
+                }
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+                var disqus_shortname = disqusShortName;
+                var disqus_identifier = '{{id}}';
+                var disqus_url = location.protocol + '//' + window.location.host + '{{url}}#!/{{id}}';
 
+                if (loadDisqus) {
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                }
+            }
+          </script>
+        </section>
+      </article>
+    </div>
+  </div>
 </div>

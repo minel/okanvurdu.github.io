@@ -4,8 +4,9 @@ email: okanvurdu@gmail.com
 description: Kişisel karalamalar ve deneyimlerin bir dökümü
 baseurl: ""
 url: "http://okanvurdu.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: vurdunio
+github_username:  okanvurdu
 
 # Build settings
 markdown: kramdown
+excerpt_separator: <!--more-->
