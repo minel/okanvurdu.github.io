@@ -2,7 +2,6 @@
 layout: post
 title: Elementary OS için "lid-close-action" ayarı
 date: '2015-04-16 10:19:02'
-permalink: :title.html
 ---
 
 Bildiğiniz gibi son zamanların popüler Linux dağıtımlarından birisi "Elementary OS". Ben de geçtiğimiz günlerde yayınlanan kararlı versiyonu "Freya" (0.3) yı kurduktan sonra, karşılaştığım bir soruna nasıl çözüm ürettiğimi paylaşmak istedim.

@@ -2,7 +2,6 @@
 layout: post
 title: Ruby için Redcarpet
 date: '2015-02-03 17:43:04'
-permalink: :title.html
 ---
 
 Redcarpet, Ruby betiklerimizde markdown işlemek için kullanabileceğimiz bir kütüphanedir.

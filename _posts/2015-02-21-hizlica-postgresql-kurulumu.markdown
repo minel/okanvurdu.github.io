@@ -2,7 +2,6 @@
 layout: post
 title: Hızlıca PostgreSQL Kurulumu
 date: '2015-02-21 16:13:03'
-permalink: :title.html
 ---
 
 Merhaba, bu blog gönderisinde "Ubuntu 14.04 x64 üzerinde temiz bir biçimde PostgreSQL nasıl kurulur?" sorusuna kendimce yanıt vermeye çalışacağım.
