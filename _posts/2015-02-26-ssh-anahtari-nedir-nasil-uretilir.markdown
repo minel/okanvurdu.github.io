@@ -2,7 +2,6 @@
 layout: post
 title: 'SSH: Nedir, Nerede, Nasıl?'
 date: '2015-02-26 10:58:33'
-permalink: :title.html
 ---
 
 Küçük bir Google araması ("What is SSH") yaptığımda SSH hakkında şöyle bir tanıma eriştim:

@@ -2,7 +2,6 @@
 layout: post
 title: PostgreSQL'de Rolleri Yönetme
 date: '2015-02-22 20:11:20'
-permalink: :title.html
 ---
 
 Uygulamalarımız için yaptığımız veritabanı bağlantı ayarlarında genellikle şu 3 temel bilgiyi vermemiz beklenir:

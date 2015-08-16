@@ -2,7 +2,6 @@
 layout: post
 title: '"http-server" İle Kolayca Yayına Geçirin'
 date: '2015-03-24 19:30:27'
-permalink: :title.html
 ---
 
 Merhaba, bu yazıda geçtiğimiz günlerde keşfettiğim bir npm paketinden bahsedeceğim.

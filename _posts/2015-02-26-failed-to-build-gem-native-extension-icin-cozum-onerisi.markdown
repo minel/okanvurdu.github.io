@@ -2,7 +2,6 @@
 layout: post
 title: '"Failed to build gem native extension" İçin Çözüm Önerisi'
 date: '2015-02-26 15:46:46'
-permalink: :title.html
 ---
 
 **Dikkat:** Birazdan bu yazının devamında okuyacaklarınız, içerisinde Ubuntu 14.04.2 LTS yüklü bir makinede denenmiş olup, farklı dağıtımlar veya sistem konfigürasyonları için başarılı olabileceği iddia edilmeyen ifadeler içerebilir. Ruby veya Ruby on Rails ile geliştirme yapmıyorsanız bu yazı sizin için çok büyük bir önem ifade etmeyecektir.
