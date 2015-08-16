@@ -11,7 +11,7 @@ layout: default
         <div class="dn-author">Okan Vurdu tarafından</div>
       </div>
       <div class="large-12 medium-12 small-12 columns no-sp dn-date ">
-        <div class="dn-head-meta dn-date-share"><time datetime="2015-04-16">16 / Nis / 2015</time></div>
+        <div class="dn-head-meta dn-date-share"><time datetime="{{ post.date | date: "%b %-d, %Y" }}">{{ post.date | date: "%b %-d, %Y" }}</time></div>
       </div>
     </header>
 
