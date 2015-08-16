@@ -7,7 +7,7 @@ date: '2015-08-16 20:11:00'
 Merhaba, bu yazımda blogumu Ghost'tan Jekyll'e göç ederken karşılaştığım bir problem ve çözüm önerisinden bahsedeceğim.
 
 Unutmadan; bunun bir çözüm yolu olduğunu ve daha efektif çözümler üretilebileceğini belirtmek lazım. Şimdilik gayet kullanışlı.
-
+<!--more-->
 Ghost ile birlikte kullandığım temayı fazlasıyla sevdiğimden dolayı Jekyll'da da kullanmak istedim. Sonrasında bu işin oluru (aslında eforu) nedir diyerekten her ikisinin de tema düzenlerini inceledim. Gördüğüm kadarıyla arada uçurum yoktu, fakat yine de değişmesi gereken bir hayli kısım mevcuttu.
 
 En basitinden, Ghost içindeki tema motorunun mantıksal ifadeleri işleme ve bir gönderiye ait içeriği bastırma şekli Jekyll'dan biraz farklıydı.
