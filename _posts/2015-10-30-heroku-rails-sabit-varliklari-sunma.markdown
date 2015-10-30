@@ -3,10 +3,10 @@ layout: post
 title: "Heroku + Rails: Sabit varlıkları sunma"
 date: '2015-10-30 23:40:00'
 ---
-Merhaba,
-Bu yazıda bir Rails uygulamasını Heroku'ya deploy ederken karşılaştığım küçük bir problemden bahsedip,  çözüm yollarından birini örnekleyeceğim.
+Merhaba,<br/>
+Bu yazıda; bir Rails uygulamasını Heroku'ya deploy ederken karşılaştığım küçük bir problemden bahsedip,  çözüm yollarından birini örnekleyeceğim.
 
-Öncelikle, yazı başlığını Türkçe + İngilizce karmaşası olmasın diye bu şekilde seçtim. Burada "sabit varlıklar" ile ifade etmeye çalıştığım "assets" olarak bilinen, içerisinde uygulamanıza ait stil dosyaları, javascript betikleri vb. kaynakları barındıran yapının genel adıdır.<!--more-->
+Öncelikle yazı başlığını Türkçe + İngilizce karmaşası olmasın diye bu şekilde seçtim. Burada "sabit varlıklar" ile ifade etmeye çalıştığım; "assets" olarak bilinen, içerisinde uygulamanıza ait stil dosyaları, javascript betikleri vb. kaynakları barındıran yapının genel adıdır.<!--more-->
 
 Development ortamında bahsi geçen CSS ve Javascript dosyalarına erişimde herhangi bir problem yaşamıyordum. Uygulamayı Heroku'ya deploy edip Procuduction ortamına taşıdığımda ise, asset pipeline'ın ürettiği çıktılara tarayıcı tarafından erişilememekteydi. Bildiğiniz; `404 - Resource Not Found` hatası ile karşılaşmaktaydım.
 
