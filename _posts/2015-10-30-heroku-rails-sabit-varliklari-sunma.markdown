@@ -14,11 +14,11 @@ Küçük bir araştırmanın ardından şununla karşılaştım:
 https://devcenter.heroku.com/articles/ruby-support#static-assets
 
 ####Tam olarak nedeni ise şöyle:
-Heroku dışındaki Rails deploymentları; Load Balancing, sabit varlıklarını doğrudan sunmak vb. işlemler için Nginx gibi bir HTTP Proxy sunucusuna ihtiyaç duyar. Örneğin, bir CSS dosyasına erişim sağlamak istediğinizde Nginx bunu diskteki `/public/assets/blahblah.css` yolu üzerinden sunmaya çalışır, dolayısıyla sunamaz.
+Heroku dışındaki Rails deploymentları; Load Balancing, sabit varlıkları doğrudan sunmak vb. işlemler için Nginx gibi bir HTTP Proxy sunucusuna ihtiyaç duyar. Örneğin, bir CSS dosyasına erişim sağlamak istediğinizde Nginx bunu diskteki `/public/assets/blahblah.css` yolu üzerinden sunmaya çalışır.
 
-Heroku bu noktada üçüncü parti bir proxy sunucusuna ihtiyaç duymadığı için bu yapılandırmayı kontrolü uygulamanıza verecek biçimde güncelleştirmeniz gerekir.
+Heroku bu noktada üçüncü parti bir proxy sunucusuna ihtiyaç duymadığı için, yapılandırmanın kontrolü uygulamanıza verecek biçimde güncelleştirilmesi gerekir.
 
-Aşağıdaki satırları Gemfile'ınıza ekleyerek bu yapılandırmayı gerçekleştirmeniz mümkün:<br/>
+Aşağıdaki satırları Gemfile'ınıza ekleyerek bunu sağlamanız mümkün:<br/>
 `gem 'rails_serve_static_assets'`<br/>
 `gem 'rails_stdout_logging'`
 
