@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Heroku + Rails: Sabit varlıkları sunma
+title: "Heroku + Rails: Sabit varlıkları sunma"
 date: '2015-10-30 23:40:00'
 ---
 Merhaba,
@@ -18,8 +18,8 @@ Heroku dışındaki Rails deploymentları; Load Balancing, sabit varlıklarını
 
 Heroku bu noktada üçüncü parti bir proxy sunucusuna ihtiyaç duymadığı için bu yapılandırmayı kontrolü uygulamanıza verecek biçimde güncelleştirmeniz gerekir.
 
-Aşağıdaki iki Gem'i Gemfile'ınıza ekleyerek bu yapılandırmayı gerçekleştirmeniz mümkün:
-`gem 'rails_serve_static_assets'`
+Aşağıdaki satırları Gemfile'ınıza ekleyerek bu yapılandırmayı gerçekleştirmeniz mümkün:<br/>
+`gem 'rails_serve_static_assets'`<br/>
 `gem 'rails_stdout_logging'`
 
 Kolaylıklar dilerim.
