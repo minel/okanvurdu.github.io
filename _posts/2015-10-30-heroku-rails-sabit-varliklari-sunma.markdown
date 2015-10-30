@@ -11,7 +11,7 @@ Bu yazıda; bir Rails uygulamasını Heroku'ya deploy ederken karşılaştığı
 Development ortamında bahsi geçen CSS ve Javascript dosyalarına erişimde herhangi bir problem yaşamıyordum. Uygulamayı Heroku'ya deploy edip Procuduction ortamına taşıdığımda ise, asset pipeline'ın ürettiği çıktılara tarayıcı tarafından erişilememekteydi. Bildiğiniz; `404 - Resource Not Found` hatası ile karşılaşmaktaydım.
 
 Küçük bir araştırmanın ardından şununla karşılaştım:
-https://devcenter.heroku.com/articles/ruby-support#static-assets
+[https://devcenter.heroku.com/articles/ruby-support#static-assets](https://devcenter.heroku.com/articles/ruby-support#static-assets)
 
 ####Tam olarak nedeni ise şöyle:
 Heroku dışındaki Rails deploymentları; Load Balancing, sabit varlıkları doğrudan sunmak vb. işlemler için Nginx gibi bir HTTP Proxy sunucusuna ihtiyaç duyar. Örneğin, bir CSS dosyasına erişim sağlamak istediğinizde Nginx bunu diskteki `/public/assets/blahblah.css` yolu üzerinden sunmaya çalışır.
