@@ -16,4 +16,4 @@ Zaman geçtikçe teknik doygunluğum sürekli daha da düşük seviyedeymiş gib
 <br/><br/>
 Buraya ait ilk yazı olması gerekçesiyle sadece özeleştiri yapmayı uygun gördüm. Bakalım bundan sonra neler yazacağım...
 <br/><br/>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/W2Co7p0uKls?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/W2Co7p0uKls?rel=0&amp;controls=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
