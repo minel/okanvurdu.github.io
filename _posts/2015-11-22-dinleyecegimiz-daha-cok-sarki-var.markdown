@@ -16,4 +16,3 @@ Zaman geçtikçe teknik doygunluğum sürekli daha da düşük seviyedeymiş gib
 <br/><br/>
 Buraya ait ilk yazı olması gerekçesiyle sadece özeleştiri yapmayı uygun gördüm. Bakalım bundan sonra neler yazacağım...
 <br/><br/>
-{% youtube W2Co7p0uKls %}
