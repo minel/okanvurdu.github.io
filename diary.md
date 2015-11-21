@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /gunluk/
 ---
 
 <div class="large-6 medium-6 hide-for-small columns adjust dn-odd-parent"></div>
@@ -7,7 +8,7 @@ layout: default
 <div class="small-12 columns adjust dn-single-column"></div>
 
 {% for post in site.posts %}
-  {% if post.is_diary_post == false %}
+  {% if post.is_diary_post == true %}
   <article class="large-12 medium-12 small-12 columns post dn-post-entry adjust dn-no-sps">
     <header class="post-header">
       <div class="large-12 medium-12 small-12 columns no-sp dn-date">

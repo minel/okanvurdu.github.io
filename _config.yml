@@ -19,3 +19,4 @@ defaults:
       type: "posts"
     values:
       is_post: true
+      is_diary_post: false
