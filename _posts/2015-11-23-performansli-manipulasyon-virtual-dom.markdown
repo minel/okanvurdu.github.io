@@ -16,9 +16,9 @@ Bu noktada React.js'in sunduğu Virtual DOM mimarisi, bahsi geçen sorunları mi
 `DOM'a doğrudan müdahale etmek yerine, bir kopyasını oluştur ve değişiklikleri bunun üzerinde yap.`<br/><br/>
 Buraya kadar her şey iyi güzel de, sonrasında ne olacak? Aslında cevap basit; değişiklikleri DOM'a yansıt. Peki ne zaman? Hemen değil, en uygun zamanda.
 <br/><br/>
-En uygun zamanı biraz açmak gerekirse; doğrudan veri değişimi olduğunda demek oldukça yerinde olacaktır. (Birazcık sabırlı olun, henüz gelmedik) Peki veri değişimini algılamak nasıl mümkün olabilir? Bunun birinci yolu; **Polling** adı verilen, belli aralıklarla verinin değişip değişmediğini kontrol eden yöntemdir. Bu yöntem pek sevilen ve tercih edilen bir yöntem değil. İkinci bir yolu ise nesnelerin state değişimlerini takip etmek. (Observing - Bu yöntem React.js'in seçtiği yöntemdir.) Eğer ortada değişmiş bir şey yoksa, re-render edilmeyi gerektiren bir durum da yoktur. Bu işleri performanslı yapmak için aşağıdaki üç prensibi yerine getirmek olmazsa olmazdır:<br/>
-- Verimli Diff (Fark) algoritmaları kullanmak
-- DOM güncellemelerini topluca yapmak (Her veri değişiminde değil, birden çok veri değişimini bir arada)
+En uygun zamanı biraz açmak gerekirse; doğrudan veri değişimi olduğunda demek oldukça yerinde olacaktır. (Birazcık sabırlı olun, henüz gelmedik) Peki veri değişimini algılamak nasıl mümkün olabilir? Bunun birinci yolu; **Polling** adı verilen, belli aralıklarla verinin değişip değişmediğini kontrol eden yöntemdir. Bu yöntem pek sevilen ve tercih edilen bir yöntem değil. İkinci bir yolu ise nesnelerin state değişimlerini takip etmek. (Observing - Bu yöntem React.js'in seçtiği yöntemdir.) Eğer ortada değişmiş bir şey yoksa, re-render edilmeyi gerektiren bir durum da yoktur. Bu işleri performanslı yapmak için aşağıdaki üç prensibi yerine getirmek olmazsa olmazdır:<br/><br/>
+- Verimli Diff (Fark) algoritmaları kullanmak<br/>
+- DOM güncellemelerini topluca yapmak (Her veri değişiminde değil, birden çok veri değişimini bir arada)<br/>
 - Sadece ilgili kısmı güncellemek
 <br/><br/>
 React.js bu prensiplerin hepsini bir arada uygulamaya çalışan bir kütüphane. Henüz çok geniş çalışmalar yapmamış olsam da, ilginç yaklaşımlarıyla denenmeye değer olduğunu bir kez daha kanıtlıyor. Fırsatım olduğunda bir de Babel'dan bahsetmek istiyorum.
