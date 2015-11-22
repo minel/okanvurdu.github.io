@@ -4,7 +4,7 @@ title: "Performanslı Manipülasyon: Virtual DOM"
 date: '2015-11-23 21:23:00'
 ---
 
-Şu sıralar React.js ile ilgili "Nedir, nasıl yapılır?" sorularına kendimce yanıtlar arıyorum. Bir yandan işin uygulanabilir taraflarını irdelerken, diğer yandan bu kütüphaneyi güzelleştiren neler var fikir sahibi olmanın derdindeyim. Kütüphane demek ne kadar doğru bilinmez ama, en genel haliyle bu kategori altında yer alabilir diye düşünüyorum.
+Şu sıralar React.js ile ilgili "Nedir, nasıl yapılır?" sorularına kendimce yanıtlar arıyorum. Bir yandan işin uygulanabilir taraflarını irdelerken, diğer yandan bu kütüphaneyi güzelleştiren neler var fikir sahibi olmanın derdindeyim. Kütüphane demek ne kadar doğru bilinmez ama, en genel haliyle bu kategori altında yer alabilir diye düşünüyorum.<!--more-->
 <br/><br/>
 Bugüne kadar arkaplandaki işleri optimize etmek ve okunaklı hale getirmek için sürekli olarak yeniliklerin birbirini kovalamasına alışkındım. Ön tarafla ilgili gelişmeler de son yıllarda buna paralel bir yol izlemeye başladı. Bence hem alternatiflerin artması açısından, hem de rekabetin kaliteyi arttırmasından dolayı oldukça güzel bir olay bu. Neyse, bu durum yazımın konusu değil.
 <br/><br/>
