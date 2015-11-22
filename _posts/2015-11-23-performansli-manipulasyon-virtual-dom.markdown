@@ -12,8 +12,8 @@ Yazıda, en başta bahsettiğim incelemeler sırasında hoşuma giden bir React.
 <br/><br/>
 Mesele ön taraf olunca; geçmişten günümüze statik arayüzlerin, nasıl etkileşimli hale geldikleri konusunda hepimiz az çok bilgi sahibiyizdir. Etkileşim konusunda neredeyse sıkıntılar minimuma inmiş gibi. Günümüz problemi ise, bu etkileşimleri yaparken ne kadar performans harcandığı. Front-End teknolojileri tıpkı Back-End teknolojilerinde olduğu gibi gereksiz iş yapmaktan, performans problemlerine yol açmaktan kaçınmak için kendilerini yenilemek durumundalar.
 <br/><br/>
-Bu noktada React.js'in sunduğu Virtual DOM mimarisi, bahsi geçen sorunları minimize etmek için oldukça ideal görünüyor. Şimdi React.js bu işi nasıl yapıyor, önce ona bakalım:<br/>
-`DOM'a doğrudan müdahale etmek yerine, bir kopyasını oluştur ve değişiklikleri bunun üzerinde yap.<br/>`
+Bu noktada React.js'in sunduğu Virtual DOM mimarisi, bahsi geçen sorunları minimize etmek için oldukça ideal görünüyor. Şimdi React.js bu işi nasıl yapıyor, önce ona bakalım:<br/><br/>
+`DOM'a doğrudan müdahale etmek yerine, bir kopyasını oluştur ve değişiklikleri bunun üzerinde yap.`<br/><br/>
 Buraya kadar her şey iyi güzel de, sonrasında ne olacak? Aslında cevap basit; değişiklikleri DOM'a yansıt. Peki ne zaman? Hemen değil, en uygun zamanda.
 <br/><br/>
 En uygun zamanı biraz açmak gerekirse; doğrudan veri değişimi olduğunda demek oldukça yerinde olacaktır. (Birazcık sabırlı olun, henüz gelmedik) Peki veri değişimini algılamak nasıl mümkün olabilir? Bunun birinci yolu; **Long Polling** adı verilen, belli aralıklarla verinin değişip değişmediğini kontrol eden yöntemdir. Bu yöntem pek sevilen ve tercih edilen bir yöntem değil. İkinci bir yolu ise nesnelerin state değişimlerini takip etmek. (Observing - Bu yöntem React.js'in seçtiği yöntemdir.) Eğer ortada değişmiş bir şey yoksa, re-render edilmeyi gerektiren bir durum da yoktur. Bu işleri performanslı yapmak için aşağıdaki üç prensibi yerine getirmek olmazsa olmazdır:<br/>
