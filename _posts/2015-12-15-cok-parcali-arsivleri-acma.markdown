@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Çok parçalı arşivleri açma"
-date: '2015-11-23 21:23:00'
+date: '2015-12-15 22:38:00'
 ---
 
 Merhaba,<br/>
-Bu yazıda birden fazla parçaya bölünüp ".rar" biçeminde arşivlenmiş dosyaları nasıl dışarı çıkarabiliriz, bundan bahsetmeye çalışacağım. Öncelikle, bu sorunla karşılaştığımda [şuradaki](http://askubuntu.com/a/476680) adımları uyguladığımda çözüm üretebildim. Yine belirmekte fayda var ki; bu işlemi Ubuntu 15.10 bir makinede gerçekleştirdim.<br/><br/>
+Bu yazıda birden fazla parçaya bölünüp ".rar" biçeminde arşivlenmiş dosyaları nasıl dışarı çıkarabiliriz, bundan bahsetmeye çalışacağım. Öncelikle, bu sorunla karşılaştığımda [şuradaki](http://askubuntu.com/a/476680) adımları uyguladığımda çözüm üretebildim. Yine belirmekte fayda var ki; bu işlemi Ubuntu 15.10 bir makinede gerçekleştirdim.<!--more--><br/><br/>
 RAR arşivlerini açmak için "unrar" isimli programcıktan faydalanacağız. Dolayısıyla sisteminizde halihazırda kurulu değilse;<br/><br/>
 `sudo apt-get install rar unrar`
 <br/><br/>
